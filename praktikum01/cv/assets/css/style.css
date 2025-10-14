@@ -1,0 +1,74 @@
+body {
+  margin: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: large;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.header p {
+  text-align: center;
+}
+
+.about-me {
+  margin-bottom: 10px;
+}
+
+.about-me-detail {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.about-me-detail img {
+  width: 85px;
+  border-radius: 5px;
+}
+
+.about-me-detail p {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.experience .company {
+  font-weight: 600;
+}
+
+.experience .work {
+  margin: 10px 15px;
+  text-align: justify;
+  line-height: 1.5;
+  list-style: disc;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.education-list li {
+  font-weight: 600;
+}
+
+.skill-list {
+  margin-left: 15px;
+  list-style: disc;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.certificate-list {
+  margin-left: 15px;
+  list-style: disc;
+  line-height: 1.5;
+}
