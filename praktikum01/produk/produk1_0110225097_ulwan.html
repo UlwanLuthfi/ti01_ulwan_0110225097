@@ -38,25 +38,119 @@
 
     <!-- Product -->
     <div class="product">
-      <div class="product-image">
-        <img class="hero-image" src="assets/img/kaos1.jpg" alt="Kaos-1" />
-        <div class="small-image">
-          <img src="assets/img/kaos2.jpg" alt="Kaos-2" />
-          <img src="assets/img/kaos3.png" alt="Kaos-3" />
-          <img src="assets/img/kaos4.jpg" alt="Kaos-4" />
+      <div style="display: flex; gap: 50px">
+        <div class="product-image">
+          <img class="hero-image" src="assets/img/kaos1.jpg" alt="Kaos-1" />
+          <div class="small-image">
+            <img src="assets/img/kaos2.jpg" alt="Kaos-2" />
+            <img src="assets/img/kaos3.png" alt="Kaos-3" />
+            <img src="assets/img/kaos4.jpg" alt="Kaos-4" />
+          </div>
+          <button class="order-button">Pesan</button>
         </div>
-        <button class="order-button">Pesan</button>
-      </div>
-      <div class="product-detail">
-        <p class="product-name">Kaos Web Developer</p>
-        <p class="product-price">Rp. 85.000</p>
-        <p class="product-review">***** 2 ulasan</p>
-        <div class="product-variant">
-          <p>Pilih Varian:</p>
-          <div class="product-variant-color">
-            
+
+        <div class="product-detail">
+          <p class="product-name">Kaos Web Developer</p>
+          <p class="product-price">Rp. 85.000</p>
+          <p class="product-review">***** 2 ulasan</p>
+          <div class="product-variant">
+            <p>Pilih Varian:</p>
+            <p style="margin-top: 20px">Warna</p>
+            <div class="product-color-variant">
+              <div class="color-option">
+                <input
+                  type="radio"
+                  name="color-variant"
+                  value="hitam"
+                  id="hitam"
+                />
+                <label for="hitam"></label>
+                <span>Hitam</span>
+              </div>
+
+              <div class="color-option">
+                <input
+                  type="radio"
+                  name="color-variant"
+                  value="putih"
+                  id="putih"
+                />
+                <label for="putih"></label>
+                <span>Putih</span>
+              </div>
+
+              <div class="color-option">
+                <input
+                  type="radio"
+                  name="color-variant"
+                  value="navy"
+                  id="navy"
+                />
+                <label for="navy"></label>
+                <span>Navy</span>
+              </div>
+
+              <div class="color-option">
+                <input
+                  type="radio"
+                  name="color-variant"
+                  value="army"
+                  id="army"
+                />
+                <label for="army"></label>
+                <span>Army</span>
+              </div>
+            </div>
+
+            <p style="margin-top: 20px">Ukuran</p>
+            <div class="product-size-variant">
+              <div class="size-option">
+                <input type="radio" name="size-variant" value="m" id="m" />
+                <label for="m">M</label>
+              </div>
+
+              <div class="size-option">
+                <input type="radio" name="size-variant" value="l" id="l" />
+                <label for="l">L</label>
+              </div>
+
+              <div class="size-option">
+                <input type="radio" name="size-variant" value="xl" id="xl" />
+                <label for="xl">XL</label>
+              </div>
+
+              <div class="size-option">
+                <input type="radio" name="size-variant" value="xxl" id="xxl" />
+                <label for="xxl">XXL</label>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+
+      <div class="product-description">
+        <p style="font-size: large; font: bolder">Deskripsi Produk</p>
+        <p
+          style="
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: justify;
+            line-height: 1.5;
+          "
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos facere,
+          cum quaerat voluptatibus quia modi libero ab itaque dolore debitis
+          pariatur optio neque similique! Laudantium perferendis illo, magni
+          eius dolores quas necessitatibus praesentium adipisci fugiat molestiae
+          vero accusamus voluptates illum, repudiandae cum et ullam excepturi,
+          repellendus dolorum? Quo, assumenda distinctio molestias perferendis
+          neque nihil tenetur eveniet soluta, ipsam nostrum repudiandae qui quae
+          quidem quisquam et? Dolorum voluptatibus aperiam facilis eligendi
+          aliquam, culpa eius rerum accusantium, excepturi ab nobis aspernatur
+          commodi nam ex natus accusamus, sit deleniti esse at adipisci
+          molestias magnam mollitia sunt fugit. Quo asperiores dolor sit. Vitae,
+          repellendus.
+        </p>
       </div>
     </div>
   </body>
