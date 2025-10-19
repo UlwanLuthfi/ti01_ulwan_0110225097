@@ -3,25 +3,144 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Order Product</title>
+    <title>Order Product - Form</title>
   </head>
   <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
       <ul class="nav-list">
-        <li><a href="https://github.com/UlwanLuthfi">Home</a></li>
-        <li><a href="">Generate Link</a></li>
-        <li><a href="">Transaction History</a></li>
-        <li><a href="">Policy</a></li>
-        <li><a href="">Logout</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Generate Link</a></li>
+        <li><a href="#">Transaction History</a></li>
+        <li><a href="#">Policy</a></li>
+        <li><a href="#">Logout</a></li>
       </ul>
     </nav>
 
     <!-- Order Form -->
-    <form action="">
-      <label for="product-image">Upload Image</label>
-      <input type="file" name="product-image" id="product-image" />
+    <form action="output.php" method="post" enctype="multipart/form-data">
+      <div style="display: flex">
+        <div class="upload-image">
+          <div id="image-placeholder" class="image-placeholder">
+            (Gambar akan muncul di sini)
+          </div>
+
+          <img id="preview" alt="Image Preview" />
+
+          <div>
+            <label for="image">Upload Gambar Produk:</label><br />
+            <input type="file" name="image" id="image" accept="image/*" />
+          </div>
+        </div>
+
+        <div class="product-detail">
+          <div class="product-detail-input">
+            <label for="product-title">Title Here:</label>
+            <input type="text" name="product-title" id="product-title" />
+          </div>
+
+          <div class="product-detail-input">
+            <label for="product-description">Description:</label>
+            <textarea
+              name="product-description"
+              id="product-description"
+            ></textarea>
+          </div>
+
+          <div class="product-detail-input">
+            <label for="account-number">Account Number:</label>
+            <input type="text" name="account-number" id="account-number" />
+          </div>
+
+          <div class="product-detail-input">
+            <label for="bank">Bank:</label>
+            <select name="bank" id="bank">
+              <option value="HSBC">HSBC</option>
+              <option value="BRI">BRI</option>
+              <option value="BCA">BCA</option>
+              <option value="BNI">BNI</option>
+            </select>
+          </div>
+
+          <div class="product-detail-input">
+            <label for="account-holder">Account Holder:</label>
+            <input type="text" name="account-holder" id="account-holder" />
+          </div>
+
+          <div class="product-detail-input">
+            <label for="transaction">Transaction:</label>
+            <div>
+              <input
+                type="number"
+                min="1"
+                value="1"
+                name="transaction"
+                id="transaction"
+              />
+              <p>
+                *if the transaction is for 3 person, choose 3 form the drop-down
+                list
+              </p>
+              <div style="display: flex; margin-top: 5px">
+                <input
+                  type="checkbox"
+                  name="send-to-phone-checkbox"
+                  id="send-to-phone-checkbox"
+                />
+                <p>Send to Mobile Phone</p>
+              </div>
+              <div style="display: flex">
+                <input
+                  type="checkbox"
+                  name="send-to-email-checkbox"
+                  id="send-to-email-checkbox"
+                />
+                <p>Send to Email</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-detail-input">
+            <label for="send-to-phone">Send to Mobile Phone:</label>
+            <input type="text" name="send-to-phone" id="send-to-phone" />
+          </div>
+
+          <div class="product-detail-input">
+            <label for="send-to-email">Send to Email:</label>
+            <input type="text" name="send-to-email" id="send-to-email" />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" name="submit" class="generate-btn">
+        Generate Nabr Link
+      </button>
     </form>
+
+    <script>
+      const imageInput = document.getElementById('image');
+      const previewImage = document.getElementById('preview');
+      const imagePlaceholder = document.getElementById('image-placeholder');
+
+      imageInput.addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+
+          reader.onload = function (e) {
+            previewImage.src = e.target.result;
+            previewImage.style.display = 'block';
+            imagePlaceholder.style.display = 'none';
+          };
+
+          reader.readAsDataURL(file);
+        } else {
+          previewImage.style.display = 'none';
+          imagePlaceholder.style.display = 'flex';
+        }
+      });
+    </script>
   </body>
 </html>
