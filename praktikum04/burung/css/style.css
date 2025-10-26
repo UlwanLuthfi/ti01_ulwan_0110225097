@@ -1,0 +1,44 @@
+body {
+  background-color: #f5f5db;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+  background-color: #deb887;
+  text-align: center;
+  padding: 10px;
+}
+
+.header h1 {
+  color: #0101f4;
+}
+
+.header-description {
+  background-color: #fed700;
+  border-top: 2px dotted black;
+  border-left: 2px dotted black;
+}
+
+.header-description p {
+  margin: 0;
+}
+
+.nav {
+  text-align: center;
+  margin: 20px;
+}
+
+.image {
+  text-align: center;
+}
+
+.image img {
+  width: 23%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.first-letter {
+  font-size: 50px;
+  color: blue;
+}
