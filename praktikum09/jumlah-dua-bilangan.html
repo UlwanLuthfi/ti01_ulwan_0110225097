@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jumlah Dua Bilangan</title>
+  </head>
+  <body>
+    <h1>Hitung Jumlah Dua Bilangan</h1>
+
+    <input type="number" id="bilangan1" />
+    <p>+</p>
+    <input type="number" id="bilangan2" />
+    <p>=</p>
+    <input type="text" id="hasil" readonly />
+
+    <script>
+      const bilangan1 = document.getElementById("bilangan1");
+      const bilangan2 = document.getElementById("bilangan2");
+      const output = document.getElementById("hasil");
+
+      bilangan1.onchange = hitung;
+      bilangan2.onchange = hitung;
+
+      function hitung() {
+        const bil1 = Number(bilangan1.value);
+        const bil2 = Number(bilangan2.value);
+
+        const hasil = bil1 + bil2;
+
+        output.value = hasil;
+      }
+    </script>
+  </body>
+</html>

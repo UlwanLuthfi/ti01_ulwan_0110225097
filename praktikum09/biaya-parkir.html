@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biaya Parkir</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Menghitung Biaya Parkir</h1>
+    <p>
+      Jika parkir 2 jam pertama maka dikenakan biaya parkir 3.000 rupiah, dan
+      per jam berikut nya kena biaya tambahan 1.000 rupiah.
+    </p>
+
+    <label for="jamMasuk">Jam Masuk:</label>
+    <input type="number" id="jamMasuk" min="0" />
+    <br />
+
+    <label for="jamKeluar">Jam Keluar:</label>
+    <input type="number" id="jamKeluar" min="0" />
+    <br /><br />
+
+    <button id="btnHitung">Hitung</button>
+
+    <p id="hasil"></p>
+
+    <script>
+      const inputMasuk = document.getElementById("jamMasuk");
+      const inputKeluar = document.getElementById("jamKeluar");
+      const output = document.getElementById("hasil");
+      const buttonHitung = document.getElementById("btnHitung");
+
+      buttonHitung.addEventListener("click", hitungBiaya);
+
+      function hitungTarif(lamaJam) {
+        if (lamaJam <= 2) {
+          return 3000;
+        }
+        return lamaJam * 1000 + 1000;
+      }
+
+      function hitungBiaya() {
+        const masuk = Number(inputMasuk.value);
+        const keluar = Number(inputKeluar.value);
+
+        if (masuk < 0 || keluar < 0) {
+          output.textContent = "Jam tidak boleh bernilai negatif.";
+          return;
+        }
+
+        if (isNaN(masuk) || isNaN(keluar)) {
+          output.textContent = "Harap isi kedua jam terlebih dahulu.";
+          return;
+        }
+
+        if (keluar < masuk) {
+          output.textContent =
+            "Jam keluar tidak boleh lebih kecil dari jam masuk.";
+          return;
+        }
+
+        const lama = keluar - masuk;
+        const biaya = hitungTarif(lama);
+
+        output.textContent = `Lama parkir: ${lama} jam — Biaya: Rp ${biaya}`;
+      }
+    </script>
+  </body>
+</html>
