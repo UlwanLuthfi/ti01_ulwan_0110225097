@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menghitung Keliling dan Luas Lingkaran</title>
+  </head>
+  <body>
+    <h2>Menghitung Keliling dan Luas Lingkaran</h2>
+
+    <span id="phi"></span>
+    <br />
+
+    <span id="jari2"></span>
+    <br />
+
+    <span id="luas"></span>
+    <br />
+
+    <span id="Keliling"></span>
+    <br />
+
+    <script>
+      const PHI = 3.14;
+      const r = 14;
+      const luas = PHI * (r * r);
+      const Keliling = 2 * PHI * r;
+
+      document.getElementById('phi').innerHTML = 'Nilai Phi = ' + PHI;
+      document.getElementById('jari2').innerHTML = 'Nilai Jari-jari = ' + r;
+      document.getElementById('luas').innerHTML = 'Nilai Luas = ' + luas;
+      document.getElementById('Keliling').innerHTML =
+        'Nilai KeliKeliling = ' + Keliling;
+    </script>
+  </body>
+</html>
