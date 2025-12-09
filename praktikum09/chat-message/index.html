@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Message</title>
+
+    <style>
+      body {
+        min-height: 2000px;
+      }
+
+      .wrapper {
+        width: 300px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 20px;
+      }
+
+      .chat-container {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+      }
+
+      .input-row {
+        display: flex;
+        gap: 6px;
+        margin-top: 6px;
+      }
+
+      .chat-input {
+        flex: 1;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <span
+      >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto a
+      ratione soluta mollitia reprehenderit? Sint unde esse dolore quia sit
+      repellat exercitationem libero rerum ab pariatur consequuntur nihil est,
+      id suscipit numquam consectetur dolores magni! Consequuntur ex in
+      officiis! Ipsam distinctio quasi veniam vero laboriosam perspiciatis
+      porro. Dolorem ex excepturi nesciunt, reprehenderit quis voluptas. Quidem
+      sapiente est ipsam deleniti. Beatae odio fugiat tempora voluptatem ea
+      iusto voluptatibus, doloremque quisquam, obcaecati deleniti necessitatibus
+      minus in, omnis eius commodi enim consequuntur sit reprehenderit velit
+      molestiae corporis asperiores provident ad excepturi. Tempore saepe animi
+      veniam deserunt ut quaerat dignissimos distinctio quasi, illo delectus
+      quos. Illum magni similique rem nam deserunt illo temporibus aut fugit
+      voluptate voluptatibus! Numquam libero saepe, laboriosam, facere nesciunt
+      odio officiis soluta natus tenetur quisquam, temporibus quo doloremque
+      excepturi fugiat autem earum iusto aperiam nobis voluptates. Amet quod
+      nobis exercitationem nesciunt, cumque blanditiis, a, aliquam libero
+      repellat provident doloremque illo ipsam sequi. Sapiente saepe voluptates
+      asperiores quis totam similique corporis possimus delectus distinctio
+      alias veritatis accusamus, dolor nesciunt, unde ad accusantium eos officia
+      cupiditate non hic nulla? Dolorem suscipit hic, dicta expedita quaerat
+      fugit illo natus earum voluptate ad eum. Quas corrupti dignissimos, a
+      optio dolores obcaecati dolore quis natus.</span
+    >
+
+    <div class="wrapper">
+      <div class="chat-container" id="chatContainer"></div>
+
+      <div class="input-row">
+        <input
+          class="chat-input"
+          type="text"
+          id="chat"
+          placeholder="Ketik disini"
+        />
+        <button id="submit">Kirim</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

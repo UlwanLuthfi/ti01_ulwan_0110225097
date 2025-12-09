@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buah</title>
+  </head>
+  <body>
+    <p>Buah favorit:</p>
+    <select name="buah" id="buah"></select>
+
+    <script type="text/javascript">
+      const buah = ["Mangga", "Pisang", "Apel", "Jeruk"];
+      const selectBuah = document.getElementById("buah");
+
+      buah.forEach((namaBuah, index) => {
+        console.log(`Buah ke-${index} adalah ${namaBuah}`);
+
+        const option = document.createElement("option");
+        option.value = namaBuah;
+        option.textContent = namaBuah;
+
+        selectBuah.appendChild(option);
+      });
+    </script>
+  </body>
+</html>

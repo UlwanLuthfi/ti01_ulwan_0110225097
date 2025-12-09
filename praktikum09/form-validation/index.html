@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+
+    <style>
+      .error {
+        color: red;
+        font-size: 0.9rem;
+        margin-left: 8px;
+      }
+
+      input.invalid {
+        border: 2px solid red;
+      }
+
+      #result {
+        width: fit-content;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #000;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" required />
+      <span class="error" id="err-nama"></span>
+      <br />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+      <span class="error" id="err-email"></span>
+      <br />
+
+      <label for="jam-keberangkatan">Jam Keberangkatan</label>
+      <input type="time" id="jam-keberangkatan" required />
+      <span class="error" id="err-jam"></span>
+      <br />
+
+      <label for="tujuan">Tujuan</label>
+      <input type="text" id="tujuan" required />
+      <span class="error" id="err-tujuan"></span>
+      <br />
+
+      <label for="jumlah-tiket">Jumlah Tiket</label>
+      <input type="number" id="jumlah-tiket" min="1" max="10" required />
+      <span class="error" id="err-tiket"></span>
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
