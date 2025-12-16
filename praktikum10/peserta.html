@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="src/style/style.css" />
+
+    <title>Registrasi Peserta</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="src/image/logo_sttnf-removebg-preview.png"
+            alt="Logo"
+            width="30"
+            height="24"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="seminar.html">Registrasi Seminar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="peserta.html">
+                Registrasi Peserta
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="data.html">Data Peserta</a>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Cari data..."
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Form -->
+    <div class="container mt-5">
+      <form>
+        <!-- Nama Lengkap -->
+        <div class="row mb-3">
+          <label for="nama-lengkap" class="col-sm-3 col-form-label">
+            Nama Lengkap
+          </label>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              id="nama-lengkap"
+              placeholder="Masukkan nama lengkap"
+            />
+          </div>
+        </div>
+
+        <!-- Tempat Lahir -->
+        <div class="row mb-3">
+          <label for="tempat-lahir" class="col-sm-3 col-form-label">
+            Tempat Lahir
+          </label>
+          <div class="col-sm-6">
+            <input
+              type="text"
+              class="form-control"
+              id="tempat-lahir"
+              placeholder="Contoh: Jakarta"
+            />
+          </div>
+        </div>
+
+        <!-- Tanggal Lahir -->
+        <div class="row mb-3">
+          <label for="tanggal-lahir" class="col-sm-3 col-form-label">
+            Tanggal Lahir
+          </label>
+          <div class="col-sm-3">
+            <input type="date" class="form-control" id="tanggal-lahir" />
+          </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label"> Gender </label>
+          <div class="col-sm-6 d-flex align-items-center gap-4">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="laki-laki"
+              />
+              <label class="form-check-label" for="laki-laki">
+                Laki-laki
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="perempuan"
+                checked
+              />
+              <label class="form-check-label" for="perempuan">
+                Perempuan
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="row mb-3">
+          <label for="email" class="col-sm-3 col-form-label"> Email </label>
+          <div class="col-sm-6">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="contoh@email.com"
+            />
+          </div>
+        </div>
+
+        <!-- Status Peserta -->
+        <div class="row mb-4">
+          <label class="col-sm-3 col-form-label"> Status Peserta </label>
+          <div class="col-sm-4">
+            <select class="form-select">
+              <option selected disabled>Pilih status peserta</option>
+              <option value="mahasiswa">Mahasiswa</option>
+              <option value="dosen">Dosen</option>
+              <option value="umum">Umum</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-6">
+            <button type="submit" class="btn btn-primary">Daftar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

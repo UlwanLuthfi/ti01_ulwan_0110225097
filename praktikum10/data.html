@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="src/style/style.css" />
+
+    <title>Registrasi Peserta</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="src/image/logo_sttnf-removebg-preview.png"
+            alt="Logo"
+            width="30"
+            height="24"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="seminar.html">Registrasi Seminar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="peserta.html"> Registrasi Peserta </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="data.html">Data Peserta</a>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Cari data..."
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <nav
+      class="container mt-5"
+      style="--bs-breadcrumb-divider: '>'"
+      aria-label="breadcrumb"
+    >
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Kegiatan</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          Peserta Kegiatan Seminar Rembulan 1 September 2017
+        </li>
+      </ol>
+    </nav>
+
+    <div class="container my-4">
+      <!-- FILTERS -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h6 class="fw-bold mb-3">Filters</h6>
+
+          <div class="row g-4 mx-5">
+            <!-- Tanggal Daftar -->
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Tanggal Daftar</label>
+
+              <!-- From -->
+              <div class="row mb-3">
+                <label for="from" class="col-sm-3 col-form-label"> From </label>
+                <div class="col-sm-3">
+                  <input type="date" class="form-control" id="from" />
+                </div>
+              </div>
+
+              <!-- To -->
+              <div class="row mb-3">
+                <label for="to" class="col-sm-3 col-form-label"> To </label>
+                <div class="col-sm-3">
+                  <input type="date" class="form-control" id="to" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Kategori & Status -->
+            <div class="col-md-3">
+              <label class="form-label fw-semibold"> Kategori Peserta </label>
+              <select class="form-select">
+                <option selected>Mahasiswa</option>
+                <option>Dosen</option>
+                <option>Umum</option>
+              </select>
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label fw-semibold"> Status Peserta </label>
+              <select class="form-select">
+                <option selected>Booking</option>
+                <option>Paid</option>
+                <option>Cancel</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DATA PESERTA -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Header -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h6 class="fw-bold mb-0">Data Peserta Seminar</h6>
+            <button class="btn btn-outline-secondary btn-sm">Download</button>
+          </div>
+
+          <!-- Search -->
+          <div class="row mb-3">
+            <label for="search" class="col-sm-1 col-form-label">Search</label>
+            <div class="col-sm-3">
+              <input
+                type="text"
+                class="form-control"
+                id="search"
+                placeholder="Masukkan search"
+              />
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped align-middle">
+              <thead class="table-secondary text-center">
+                <tr>
+                  <th>No</th>
+                  <th>Nomor</th>
+                  <th>Nama Lengkap</th>
+                  <th>Tempat Lahir</th>
+                  <th>Tanggal Lahir</th>
+                  <th>Gender</th>
+                  <th>Email</th>
+                  <th>Kategori</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>S001</td>
+                  <td>Budi Anto</td>
+                  <td>Depok</td>
+                  <td>2000-10-01</td>
+                  <td>Laki-laki</td>
+                  <td>budianto@gmail.com</td>
+                  <td>Mahasiswa</td>
+                  <td>Booking</td>
+                  <td class="text-center">
+                    <button class="btn btn-sm btn-outline-secondary me-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-eye-icon lucide-eye"
+                      >
+                        <path
+                          d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
+                        />
+                        <circle cx="12" cy="12" r="3" />
+                      </svg>
+                    </button>
+                    <button class="btn btn-sm btn-outline-secondary">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-pencil-line-icon lucide-pencil-line"
+                      >
+                        <path d="M13 21h8" />
+                        <path d="m15 5 4 4" />
+                        <path
+                          d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"
+                        />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- baris kosong contoh -->
+                <tr>
+                  <td colspan="10">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td colspan="10">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
